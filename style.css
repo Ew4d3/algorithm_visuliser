@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    margin-top: 40px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#array-container {
+    height: 400px;
+    margin: 40px auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 5px;
+    max-width: 1000px;
+}
+
+.bar {
+    width: 20px;
+    background-color: steelblue;
+}
