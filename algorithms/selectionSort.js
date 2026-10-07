@@ -1,8 +1,8 @@
-export function selectionSort(array) {  //standard selection sort alg
+export function selectionSort(array) {
 
     const operations = [];
 
-    const copy = [...array];  //copy of arr
+    const copy = [...array];
 
     for (let i = 0; i < copy.length - 1; i++) {
 
@@ -51,7 +51,3 @@ export function selectionSort(array) {  //standard selection sort alg
 
     return operations;
 }
-
-
-
-
