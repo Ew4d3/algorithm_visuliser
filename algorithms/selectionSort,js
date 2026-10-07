@@ -1,0 +1,57 @@
+export function selectionSort(array) {  //standard selection sort alg
+
+    const operations = [];
+
+    const copy = [...array];  //copy of arr
+
+    for (let i = 0; i < copy.length - 1; i++) {
+
+        let minIndex = i;
+
+        for (
+            let j = i + 1;
+            j < copy.length;
+            j++
+        ) {
+
+            operations.push({
+                type: "compare",
+                indices: [minIndex, j]
+            });
+
+            if (copy[j] < copy[minIndex]) {
+                minIndex = j;
+            }
+        }
+
+        if (minIndex !== i) {
+
+            const temp = copy[i];
+
+            copy[i] = copy[minIndex];
+
+            copy[minIndex] = temp;
+
+            operations.push({
+                type: "swap",
+                indices: [i, minIndex]
+            });
+        }
+
+        operations.push({
+            type: "sorted",
+            index: i
+        });
+    }
+
+    operations.push({
+        type: "sorted",
+        index: copy.length - 1
+    });
+
+    return operations;
+}
+
+
+
+

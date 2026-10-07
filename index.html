@@ -1,30 +1,90 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  <!-- This is a single-line comment -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Algorithm Visualiser</title>
 
-    <link rel="stylesheet" href="style.css">
+    <title>Algorithm Visualiser</title>  <!-- title -->
+    <link rel="stylesheet" href="style.css">  <!-- link to css -->
+
 </head>
-
 <body>
 
-    <h1>Algorithm Visualiser</h1>
+    <h1>Algorithm Visualizer</h1>  <!-- heading -->
 
-    <button id="generate-button">
-        Generate Array
-    </button>
+    <div id="controls">  <!-- all buttons -->
+        <button id="generate-button">
+            Generate Array
+        </button>
 
-    <button id="sort-button">
-        Sort
-    </button>
+        <select id="algorithm-select">   <!-- dropdown of different algs - will be more added -->
+            <option value="bubble">Bubble Sort</option>
+            <option value="selection">Selection Sort</option>
+        </select>
+    
+        <button id="sort-button">
+            Sort
+        </button>
+    
+        <button id="pause-button" disabled>
+            Pause
+        </button>
+    
+        <button id="step-button" disabled>
+            Step
+        </button>
+    
+        <button id="reset-button">
+            Reset
+        </button>
+    
+        <label for="speed">
+            Speed
+        </label>
+
+                <!-- speed slider -->
+        <input  
+            type="range"
+            id="speed"
+            min="50"
+            max="1000"
+            value="300"
+        > 
+    
+    </div>
+
+    <div id="stats">
+
+
+        <!-- stat text+labels -->
+        <span>
+            Comparisons: <strong id="comparisons">0</strong>
+        </span>
+    
+        <span>
+            Swaps: <strong id="swaps">0</strong>
+        </span>
+    
+        <span>
+            Operation:
+            <strong id="current-operation">0</strong>
+            /
+            <strong id="total-operations">0</strong>
+        </span>
+    
+    </div>
+
+
 
     <div id="array-container"></div>
 
-    <script src="script.js"></script>
-
+    <script type="module" src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
